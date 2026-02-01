@@ -1,302 +1,34 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Patronos Tech — Soluções Técnicas e Manutenção Predial | São Paulo, SP</title>
-  <meta name="description" content="Patronos Tech: soluções técnicas e manutenção para condomínios, comércios e residências em São Paulo - padrão profissional, garantia técnica e atendimento estruturado." />
-  <meta name="keywords" content="manutenção predial, elétrica, ar-condicionado, CFTV, hidráulica, São Paulo, condomínios, comércios, residências" />
-  <link rel="icon" href="assets/favicon.ico" />
-  <link rel="preconnect" href="https://wa.me" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA4-XXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <style>
-    :root{--bg:#0b0b0c;--panel:#0f0f10;--muted:#bdb9b2;--gold:#caa44b;--accent:#e0c77a;--glass: rgba(255,255,255,0.03);--radius:12px;--max-width:1100px;--gap:18px;--elev: 0 6px 18px rgba(0,0,0,0.6);font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
-    html,body{height:100%;}
-    body{margin:0;background:linear-gradient(180deg,#070708 0%, #0b0b0c 100%);color: #eee;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.45;padding-top:72px;}
-    a{color:var(--accent); text-decoration:none;}
-    a.button{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--gold),var(--accent));color:#0b0b0c;padding:12px 16px;border-radius:10px;font-weight:600;box-shadow:var(--elev);}    
-    header.site-header{height:72px;width:100%;position:fixed;top:0;left:0;right:0;z-index:1200;backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(11,11,12,0.6), rgba(11,11,12,0.4));border-bottom:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;}
-    .container{width:100%;max-width:var(--max-width);padding:0 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
-    .brand{display:flex;align-items:center;gap:12px}.brand .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#b08f44);display:flex;align-items:center;justify-content:center;font-weight:700;color:#071}
-    .nav{display:flex;gap:18px;align-items:center}
-    .contact-pill{display:flex;flex-direction:column;gap:4px;text-align:right}
-    .contact-pill a.tel{font-weight:700;color:var(--gold)}
-    .contact-pill small{color:var(--muted);font-size:12px}
-    .hero{max-width:var(--max-width);margin:28px auto 18px;padding:28px;display:grid;grid-template-columns:1fr;gap:20px;align-items:center}
-    .hero-panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:26px;border-radius:14px;box-shadow:var(--elev);display:flex;gap:18px;align-items:center;flex-direction:column;text-align:center}
-    .hero h1{margin:0;font-size:clamp(22px,5vw,34px);color:#fff}
-    .hero p.lead{color:var(--muted);margin:0;max-width:840px}
-    .hero .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .phones-inline{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .phone-chip{background:var(--glass);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.03);color:var(--gold);font-weight:700}
-    section{max-width:var(--max-width);margin:18px auto;padding:18px}
-    h2.section-title{color:#fff;margin:0 0 12px;font-size:20px}
-    .carousel{position:relative;overflow:hidden;border-radius:12px;padding:12px 0}
-    .carousel-track{display:flex;gap:12px;transition:transform .45s cubic-bezier(.2,.9,.3,1);will-change:transform}
-    .card{min-width:260px;max-width:320px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);border-radius:12px;overflow:hidden;box-shadow:var(--elev);display:flex;flex-direction:column}
-    .card .thumb img{width:100%;height:160px;object-fit:cover;display:block}
-    .card .card-body{padding:12px;display:flex;flex-direction:column;gap:10px;flex:1}
-    .card h3{margin:0;font-size:16px;color:#fff}
-    .card p{margin:0;color:var(--muted);font-size:14px;flex:1}
-    .carousel-controls{display:flex;gap:8px;align-items:center;justify-content:center;margin-top:12px}
-    .ctrl-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 10px;border-radius:8px;cursor:pointer}
-    .steps{display:flex;flex-direction:column;gap:12px}
-    @media(min-width:880px){.hero{grid-template-columns:1fr 420px;align-items:center;text-align:left}.hero-panel{text-align:left;align-items:flex-start}.steps{flex-direction:row}.card{min-width:300px}}
-    footer{border-top:1px solid rgba(255,255,255,0.03);padding:22px 0;background:transparent;color:var(--muted)}
-    .footer-grid{display:flex;flex-direction:column;gap:12px;align-items:center}
-    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {"@type":"Organization","name":"Patronos Tech","url":"https://patronos-tech.github.io","logo":"https://patronos-tech.github.io/assets/logo.png","sameAs":[]},
-      {"@type":"LocalBusiness","name":"Patronos Tech","image":["https://patronos-tech.github.io/assets/servico-eletrica.jpg"],"telephone":["+5511952544885","+5511959861486"] ,"address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},"areaServed":"São Paulo, SP","description":"Soluções técnicas e manutenção predial para condomínios, comércios e residências — padrão profissional, garantia técnica e atendimento estruturado.","url":"https://patronos-tech.github.io","serviceType":["Elétrica","Ar-condicionado","CFTV","Telefonia","Automação","Pintura e Acabamentos","Hidráulica","Manutenção Geral"]}
-    ]
-  }
-  </script>
-
-  <!-- GA4 placeholder: cole seu ID G-XXXXXXXX aqui e descomente o bloco para ativar analytics -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXX');
-  </script>
-  -->
+      gtag('config', 'GA4-XXXXXXXXX');
+    </script>
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="container" role="navigation" aria-label="Navegação principal">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">PT</div>
-        <div>
-          <div style="font-weight:700;color:#fff">Patronos Tech</div>
-          <div style="font-size:12px;color:var(--muted)">Padrão profissional · Garantia técnica</div>
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="image1.webp" srcset="image1-1x.webp 1x, image1-2x.webp 2x" loading="lazy" alt="Image 1">
         </div>
-      </div>
-
-      <nav class="nav" aria-label="menu principal">
-        <a href="#trabalhos-tecnicos" style="color:var(--muted)">Trabalhos técnicos</a>
-        <a href="#exemplos" style="color:var(--muted)">Exemplos</a>
-        <a href="#como-funciona" style="color:var(--muted)">Como funciona</a>
-        <a href="#contato" style="color:var(--muted)">Contato</a>
-      </nav>
-
-      <div class="contact-pill" aria-hidden="false">
-        <div style="font-size:12px;color:var(--muted)">Atendimento em São Paulo</div>
-        <div><a class="tel" href="tel:+5511952544885">(11) 95254-4885</a></div>
-        <div><a class="tel" href="tel:+5511959861486">(11) 95986-1486</a></div>
-      </div>
+        <div class="carousel-item">
+            <img src="image2.webp" srcset="image2-1x.webp 1x, image2-2x.webp 2x" loading="lazy" alt="Image 2">
+        </div>
     </div>
-  </header>
-
-  <main>
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-panel" role="region" aria-label="Apresentação">
-        <h1 id="hero-heading">Soluções técnicas e manutenção predial com padrão profissional e garantia técnica</h1>
-        <p class="lead">Atendimento estruturado para condomínios, comércios e residências em São Paulo — equipe técnica especializada para projetos, manutenção e intervenções com documentação e garantia.</p>
-
-        <div class="actions" role="group" aria-label="Ações principais">
-          <a class="button" href="https://wa.me/5511952544885?text=Olá%20Patronos%20Tech,%20gostaria%20de%20um%20orçamento%20para%20serviços%20técnicos" aria-label="Solicitar orçamento via WhatsApp (11) 95254-4885">💬 Solicitar Orçamento</a>
-          <a class="button" href="tel:+5511952544885" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);">📞 (11) 95254-4885</a>
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="image3.webp" srcset="image3-1x.webp 1x, image3-2x.webp 2x" loading="lazy" alt="Image 3">
         </div>
-
-        <div class="phones-inline" aria-hidden="false" style="margin-top:8px;"><div class="phone-chip">📞 (11) 95254-4885</div><div class="phone-chip">📞 (11) 95986-1486</div></div>
-        <small style="color:var(--muted);margin-top:10px;display:block">Atendimento em São Paulo – SP · Documentação técnica · Garantia de serviço</small>
-      </div>
-
-      <aside style="display:flex;flex-direction:column;gap:12px;align-items:center;">
-        <div style="width:100%;max-width:420px;">
-          <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;">
-            <h3 style="margin:0 0 8px;color:#fff">Contato Rápido</h3>
-            <p style="margin:0 0 12px;color:var(--muted)">Converse agora via WhatsApp com nossa equipe técnica.</p>
-            <div style="display:flex;gap:8px;">
-              <a class="button" href="https://wa.me/5511952544885?text=Solicito%20agendamento%20de%20vistoria" style="flex:1">WhatsApp (11) 95254-4885</a>
-              <a class="button" href="https://wa.me/5511959861486?text=Solicito%20informações" style="flex:1;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">WhatsApp (11) 95986-1486</a>
-            </div>
-          </div>
+        <div class="carousel-item">
+            <img src="image4.webp" srcset="image4-1x.webp 1x, image4-2x.webp 2x" loading="lazy" alt="Image 4">
         </div>
-
-        <div style="width:100%;max-width:420px;">
-          <div style="padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.03);">
-            <strong style="display:block;color:#fff;margin-bottom:6px">Garantia técnica</strong>
-            <p style="margin:0;color:var(--muted)">Todos os serviços realizados com documentação técnica, protocolos de execução e garantia contratual.</p>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <!-- Carrossel 1: Trabalhos técnicos -->
-    <section id="trabalhos-tecnicos" aria-labelledby="trabalhos-tecnicos-title" style="padding-top:6px;">
-      <h2 id="trabalhos-tecnicos-title" class="section-title">Trabalhos técnicos</h2>
-      <p style="color:var(--muted);margin-top:6px">Áreas de especialidade com padrão profissional e equipe técnica especializada.</p>
-
-      <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Trabalhos técnicos">
-        <div class="carousel-track" id="technical-track">
-
-          <article class="card" role="group" aria-label="Elétrica">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/servico-eletrica.webp"><img src="assets/servico-eletrica.jpg" alt="Elétrica" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Elétrica</h3><p>Projetos, reformas e manutenção elétrica com conformidade técnica e segurança para edificações e instalações.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Elétrica">Pedir orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Ar-condicionado">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/servico-ar.webp"><img src="assets/servico-ar.jpg" alt="Ar-condicionado" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Ar-condicionado</h3><p>Instalação, manutenção e certificação de sistemas de climatização com metodologia técnica e garantia.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Ar-condicionado">Pedir orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="CFTV">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/servico-cftv.webp"><img src="assets/servico-cftv.jpg" alt="CFTV" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>CFTV</h3><p>Projetos e instalações de câmeras e monitoramento com foco em cobertura, redundância e compliance.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20CFTV">Pedir orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Telefonia">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/servico-telecom.webp"><img src="assets/servico-telecom.jpg" alt="Telefonia" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Telefonia</h3><p>Infraestrutura de voz e dados, cabeamento e integração de sistemas com documentação técnica completa.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Telefonia">Pedir orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Automação">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/servico-outros.webp"><img src="assets/servico-outros.jpeg" alt="Automação" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Automação</h3><p>Soluções de automação predial e controle para eficiência operacional e segurança, com projetos e documentação.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Automação">Pedir orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Pintura e Acabamentos">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/servico-pintura.webp"><img src="assets/servico-pintura.jpg" alt="Pintura e Acabamentos" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Pintura e Acabamentos</h3><p>Intervenções técnicas de acabamento com seleção de materiais e garantia de qualidade estética e funcional.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Pintura%20e%20Acabamentos">Pedir orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Hidráulica">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/servico-agua.webp"><img src="assets/servico-agua.jpg" alt="Hidráulica" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Hidráulica</h3><p>Projetos hidráulicos, manutenção e soluções para redes prediais com laudo técnico e relatórios.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Hidráulica">Pedir orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Manutenção Geral">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/servico-geral.webp"><img src="assets/servico-geral.jpeg" alt="Manutenção Geral" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Manutenção Geral</h3><p>Atendimento técnico integrado para manutenção predial preventiva e corretiva com cronograma e registro técnico.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Manutenção%20Geral">Pedir orçamento</a></div></div>
-          </article>
-
-        </div>
-
-        <div class="carousel-controls"><button class="ctrl-btn" data-target="technical" data-action="prev" aria-label="Anterior">←</button><button class="ctrl-btn" data-target="technical" data-action="next" aria-label="Próximo">→</button></div>
-      </div>
-    </section>
-
-    <!-- Carrossel 2: Exemplos de serviços -->
-    <section id="exemplos" aria-labelledby="exemplos-title">
-      <h2 id="exemplos-title" class="section-title">Exemplos de serviços realizados</h2>
-      <p style="color:var(--muted);margin-top:6px">Casos práticos e resultados aplicados em projetos e manutenções.</p>
-
-      <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Exemplos de serviços">
-        <div class="carousel-track" id="examples-track">
-
-          <article class="card" role="group" aria-label="Troca de disjuntor">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/trabalho-quadro.webp"><img src="assets/trabalho-quadro.jpg" alt="Troca de disjuntor" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Troca de disjuntor</h3><p>Substituição de disjuntores com atualização de proteções e laudo técnico para maior segurança elétrica.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Troca%20de%20disjuntor">Solicitar orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Instalação de câmera">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/trabalho-cftv.webp"><img src="assets/trabalho-cftv.jpg" alt="Instalação de câmera" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Instalação de câmera</h3><p>Projeto de cobertura e instalação com cabeamento estruturado e integração ao sistema de monitoramento.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Instalação%20de%20câmera">Solicitar orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Instalação de ar-condicionado">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/trabalho-ar.webp"><img src="assets/trabalho-ar.jpg" alt="Instalação de ar-condicionado" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Instalação de ar-condicionado</h3><p>Instalação técnica com verificação estrutural, drenagem adequada e relatório de conformidade.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Instalação%20de%20ar-condicionado">Solicitar orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Instalação de cabo de rede">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/trabalho-rede.webp"><img src="assets/trabalho-rede.jpg" alt="Instalação de cabo de rede" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Instalação de cabo de rede</h3><p>Instalação e certificação de cabeamento de rede com testes de performance e laudos técnicos.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Instalação%20de%20cabo%20de%20rede">Solicitar orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Troca de torneiras">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/trabalho-hidraulica.webp"><img src="assets/trabalho-hidraulica.jpg" alt="Troca de torneiras" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Troca de torneiras</h3><p>Reparo e substituição de torneiras com verificação de rede e testes de estanqueidade.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Troca%20de%20torneiras">Solicitar orçamento</a></div></div>
-          </article>
-
-          <article class="card" role="group" aria-label="Troca de chuveiro">
-            <div class="thumb"><picture><source type="image/webp" srcset="assets/trabalho-hidraulica.webp"><img src="assets/trabalho-hidraulica.jpg" alt="Troca de chuveiro" loading="lazy" width="640" height="360"></picture></div>
-            <div class="card-body"><h3>Troca de chuveiro</h3><p>Substituição e ajuste de pontos de água com testes de vazão e garantia de funcionamento adequado.</p><div class="cta"><a class="button" href="https://wa.me/5511952544885?text=Orçamento%20—%20Troca%20de%20chuveiro">Solicitar orçamento</a></div></div>
-          </article>
-
-        </div>
-
-        <div class="carousel-controls"><button class="ctrl-btn" data-target="examples" data-action="prev" aria-label="Anterior">←</button><button class="ctrl-btn" data-target="examples" data-action="next" aria-label="Próximo">→</button></div>
-      </div>
-    </section>
-
-    <!-- Como funciona -->
-    <section id="como-funciona" aria-labelledby="como-title">
-      <h2 id="como-title" class="section-title">Como funciona nosso atendimento</h2>
-      <div class="steps" role="list" aria-label="Fluxo de atendimento">
-        <div class="card" style="min-width:180px;max-width:280px;"><div class="card-body"><h3>1. Contato via WhatsApp</h3><p>Atendimento estruturado e registro inicial do chamado para agendamento de vistoria.</p></div></div>
-        <div class="card" style="min-width:180px;max-width:280px;"><div class="card-body"><h3>2. Diagnóstico técnico</h3><p>Vistoria com registro técnico, verificação de causas e escopo recomendável.</p></div></div>
-        <div class="card" style="min-width:180px;max-width:280px;"><div class="card-body"><h3>3. Orçamento transparente</h3><p>Proposta formal com itens detalhados, prazos e condições — sem surpresas.</p></div></div>
-        <div class="card" style="min-width:180px;max-width:280px;"><div class="card-body"><h3>4. Execução com garantia</h3><p>Execução técnica documentada e garantia contratual sobre serviços realizados.</p></div></div>
-      </div>
-    </section>
-
-    <!-- Prova social institucional -->
-    <section aria-labelledby="clientes-title" style="padding-bottom:12px;"><h2 id="clientes-title" class="section-title">Atendemos</h2><p style="color:var(--muted);margin-top:6px">Atuação consolidada com contratos e projetos para diferentes perfis de cliente.</p>
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-top:12px;">
-        <div class="card" style="padding:14px;min-height:110px;display:flex;align-items:center;justify-content:center;"><div style="text-align:center;"><strong>Condomínios</strong><div style="color:var(--muted);font-size:13px">Gestão técnica e manutenção predial</div></div></div>
-        <div class="card" style="padding:14px;min-height:110px;display:flex;align-items:center;justify-content:center;"><div style="text-align:center;"><strong>Comércios</strong><div style="color:var(--muted);font-size:13px">Infraestrutura e atendimento operacional</div></div></div>
-        <div class="card" style="padding:14px;min-height:110px;display:flex;align-items:center;justify-content:center;"><div style="text-align:center;"><strong>Escritórios</strong><div style="color:var(--muted);font-size:13px">Projetos e instalações com documentação</div></div></div>
-        <div class="card" style="padding:14px;min-height:110px;display:flex;align-items:center;justify-content:center;"><div style="text-align:center;"><strong>Residências</strong><div style="color:var(--muted);font-size:13px">Intervenções técnicas com conforto e segurança</div></div></div>
-      </div>
-    </section>
-
-    <!-- Contato / Footer CTA -->
-    <section id="contato" aria-labelledby="contato-title" style="padding-top:6px;"><h2 id="contato-title" class="section-title">Fale com nossa equipe técnica</h2><p style="color:var(--muted);margin-top:6px">Pronto para reduzir riscos e ter serviços com garantia técnica? Entre em contato.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;"><a class="button" href="https://wa.me/5511952544885?text=Solicito%20um%20orçamento%20em%20São%20Paulo" aria-label="WhatsApp principal">WhatsApp (11) 95254-4885</a><a class="button" href="https://wa.me/5511959861486?text=Solicito%20um%20orçamento" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">WhatsApp (11) 95986-1486</a><a class="button" href="tel:+5511952544885" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">Ligar agora</a></div>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="container footer-grid"><div style="display:flex;flex-direction:column;align-items:center;gap:8px;"><div style="font-weight:700;color:#fff">Patronos Tech</div><div style="color:var(--muted)">Padrão profissional · Atendimento estruturado · Garantia técnica</div></div>
-      <div class="footer-phones" aria-label="Telefones"><a class="phone-chip" href="tel:+5511952544885">📞 (11) 95254-4885</a><a class="phone-chip" href="tel:+5511959861486">📞 (11) 95986-1486</a></div>
-      <div style="display:flex;gap:10px;align-items:center;flex-direction:column;"><small class="disclaimer">Atendimento em São Paulo - SP</small><small style="color:var(--muted)">© <span id="year"></span> Patronos Tech — Todos os direitos reservados</small></div>
     </div>
-  </footer>
-
-  <div class="visually-hidden" aria-hidden="true">Patronos Tech serviços técnicos São Paulo SP. Manutenção predial, elétrica, ar-condicionado, CFTV, hidráulica, telecom, pintura, manutenção geral. Atendimento para condomínios, comércios, escritórios e residências em São Paulo. Equipe técnica especializada, padrão profissional, garantia técnica e atendimento estruturado.</div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    (function(){
-      function initCarousel(trackId){
-        const track = document.getElementById(trackId);
-        if(!track) return;
-        let index = 0;
-        const cards = track.children;
-        const total = cards.length;
-        function show(i){
-          const gap = 12;
-          const cardWidth = cards[0].getBoundingClientRect().width;
-          const offset = (cardWidth + gap) * i;
-          track.style.transform = `translateX(-${offset}px)`;
-        }
-        document.querySelectorAll('.ctrl-btn').forEach(btn=>{
-          btn.addEventListener('click', ()=>{
-            const target = btn.dataset.target;
-            const action = btn.dataset.action;
-            if((target === 'technical' && trackId !== 'technical-track') || (target === 'examples' && trackId !== 'examples-track') || (target === 'examples' && trackId !== 'examples-track')) return;
-            if(action === 'next') index = Math.min(index + 1, total - Math.floor(window.innerWidth / (cards[0].getBoundingClientRect().width + 12)));
-            else index = Math.max(index - 1, 0);
-            show(index);
-          });
-        });
-        window.addEventListener('resize', ()=>{ index = 0; show(index);});
-      }
-      initCarousel('technical-track');
-      initCarousel('examples-track');
-    })();
-
-    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a=>{a.setAttribute('rel','noopener noreferrer');a.setAttribute('target','_blank');});
-  </script>
 </body>
 </html>
