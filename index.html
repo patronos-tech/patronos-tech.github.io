@@ -1,136 +1,289 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Patronos Tech • Serviços Técnicos e Manutenção Profissional</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Patronos Tech • Serviços Técnicos em São Paulo</title>
+  <meta name="description" content="Elétrica, Ar-condicionado, CFTV, Telecomunicação e Manutenção Geral com padrão técnico e garantia. Solicite orçamento rápido via WhatsApp.">
+  <meta name="robots" content="index,follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<meta name="description" content="Patronos Tech oferece serviços técnicos e manutenção profissional para residências, comércios e condomínios. Elétrica, CFTV, telecom, automação e manutenção com garantia técnica.">
-<link rel="canonical" href="https://patronos-tech.github.io/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Patronos Tech • Serviços Técnicos Profissionais">
-<meta property="og:description" content="Soluções técnicas confiáveis para residências, empresas e condomínios. Atendimento rápido, equipe qualificada e garantia técnica.">
-<meta property="og:image" content="https://patronos-tech.github.io/assets/images/hero-eletrica.png">
-<meta name="robots" content="index, follow">
+  <style>
+  :root {
+    --primary: #d4af37;
+    --bg: #071226;
+    --card: #0b1320;
+    --text: #fff;
+    --muted: #c8cad0;
+    --radius: 14px;
+    --maxw: 900px;
+    --shadow: 0 4px 32px rgba(0,0,0,.28);
+  }
+  html, body { margin:0; padding:0; font-family:Poppins,sans-serif; background:var(--bg); color:var(--text); }
+  body { min-height:100dvh; }
+  main { max-width:var(--maxw); margin:0 auto; padding:0 10px 64px; }
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Patronos Tech","telephone":"+5511952544885","url":"https://patronos-tech.github.io/","sameAs":["https://wa.me/5511952544885"],"address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressCountry":"BR"}}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/images/hero-eletrica.png">
-
-<style>
-/* ⚠️ CSS ORIGINAL — NÃO ALTERADO */
-:root{--bg-1:#071226;--panel:#081226;--card:#0b1320;--gold:#d4af37;--muted:#c8cad0;--white:#fff;--maxw:1120px;--radius:12px;--gap:18px;--shadow:0 12px 36px rgba(0,0,0,.55);--ctrl-size:44px}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;font-family:Poppins,system-ui;background:linear-gradient(180deg,var(--bg-1),#03121b);color:var(--white)}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 18px 48px}
-</style>
+  header { padding:20px 0 14px; background:transparent; display:flex; justify-content:center;}
+  .logo { font-size:1.25rem; font-weight:700; background:linear-gradient(90deg,#fff,var(--primary)); -webkit-background-clip:text; color:transparent;}
+  
+  /* Hero */
+  .hero { margin-top:0; padding-top:18px; text-align:center;}
+  .hero-img { width:100%; max-width:460px; min-width:180px; margin:0 auto 14px; border-radius:var(--radius); box-shadow:var(--shadow);}
+  .hero-title { font-size:1.28rem; font-weight:800; margin:0 0 8px;}
+  .hero-sub { font-size:.99rem; color:var(--muted); margin-bottom:18px;}
+  .hero-cta { display:flex; gap:10px; flex-direction:column; align-items:center; width:100%; margin:0 auto 0;}
+  .hero-cta .btn { width:100%; max-width:340px;}
+  
+  /* Button base */
+  .btn {
+    padding:13px 0;
+    background:var(--primary);
+    color:#000;
+    font-weight:700;
+    font-size:1rem;
+    border:0;
+    border-radius:var(--radius);
+    box-shadow:0 2px 12px rgba(0,0,0,.09);
+    text-decoration:none;
+    display:block;
+    text-align:center;
+    cursor:pointer;
+    transition:filter .14s;
+  }
+  .btn.sec { background:transparent; color:var(--primary); border:2px solid var(--primary);}
+  .btn:focus { outline:2px solid var(--primary);}
+  
+  /* Carrossel base (shared for both) */
+  .carousel {margin:0 auto 28px; position:relative; overflow:hidden; }
+  .carousel .track {display:flex; gap:13px; transition:transform .48s cubic-bezier(.38,.78,.1,1); padding:2px 0;}
+  .carousel .card {
+    flex:0 0 92vw; max-width:320px; min-width:220px; background:var(--card);
+    border-radius:var(--radius); box-shadow:var(--shadow);
+    padding:18px 14px 16px; display:flex; flex-direction:column; align-items:center;
+    text-align:center; margin:0 1px;
+  }
+  .carousel .cat-img, .carousel .srv-img { width:78px; height:78px; object-fit:cover; border-radius:10px; margin-bottom:10px;}
+  .carousel .srv-img {width:97px;height:80px;border-radius:8px;}
+  .carousel .card-title { font-size:1.08rem; font-weight:700; color:var(--primary); margin-bottom:4px;}
+  .carousel .card-text { font-size:.987rem; color:var(--muted); margin-bottom:.9em; min-height:36px;}
+  .carousel .btn {font-size:.97rem;padding:9px 0;}
+  /* Indicadores */
+  .carousel .indicators {display:flex; gap:7px; justify-content:center; margin-top:10px;}
+  .carousel .indicators button { width:12px; height:12px; border-radius:50%; border:0; background:rgba(255,255,255,0.14); padding:0; cursor:pointer; }
+  .carousel .indicators .active {background:var(--primary);}
+  
+  /* Bloco autoridade */
+  .autoridade {margin:42px 0 38px;}
+  .autoridade h2 {text-align:center; color:var(--primary); font-size:1.04rem; font-weight:700; margin-bottom:10px;}
+  .autoridade ul {padding:0; margin:0 auto; max-width:520px; list-style:none;}
+  .autoridade li {margin:0 0 10px 0; padding-left:20px; position:relative; color:var(--muted); font-size:1rem;}
+  .autoridade li:before {content:'✓';position:absolute;left:0;color:var(--primary);font-weight:700;}
+  
+  /* CTA final */
+  .cta-final {margin:40px auto 0; padding:22px 12px; background:linear-gradient(92deg,#101b2d 60%,rgba(212,175,55,0.07)); border-radius:var(--radius); text-align:center;}
+  .cta-final .cta-txt { font-size:1.12rem; font-weight:600; color:var(--text); margin-bottom:14px; }
+  .cta-final .btn {max-width:365px; margin:0 auto;}
+  
+  /* WhatsApp fixo (mobile) */
+  .whatsapp-float {
+    position:fixed; right:18px; bottom:22px; z-index:9999; background:var(--primary); border-radius:50%; box-shadow:0 0 24px rgba(0,0,0,.30);
+    width:57px;height:57px;display:flex;align-items:center;justify-content:center; cursor:pointer;
+    transition:filter .12s;
+  }
+  .whatsapp-float svg {width:30px;height:30px;}
+  @media(min-width:700px) {
+    .carousel .card {min-width:270px;max-width:310px;}
+    .carousel .cat-img,.carousel .srv-img{width:92px;height:84px;}
+    main {padding-bottom:70px;}
+    .whatsapp-float{display:none;} /* fixo só mobile */
+  }
+  @media(max-width:520px) {
+    .carousel .card {min-width:91vw;}
+    .cta-final .btn, .hero-cta .btn { max-width:100%; }
+  }
+  </style>
 </head>
-
 <body>
 
 <header>
-  <div class="container header-inner">
-    <div class="logo">Patronos Tech</div>
-    <button id="menuBtn" class="menu-btn">☰</button>
-  </div>
+  <span class="logo">Patronos Tech</span>
 </header>
 
-<main class="container">
-
-<section class="hero">
-  <picture>
-    <source srcset="assets/images/hero-tecnico.png" media="(max-width:600px)">
-    <img src="assets/images/hero-eletrica.png" alt="Serviços técnicos profissionais">
-  </picture>
-
-  <div class="hero-block">
-    <h1>Serviços técnicos e manutenção com garantia e confiança</h1>
-    <p class="lead">
-      Atendemos residências, comércios e condomínios com soluções técnicas seguras, profissionais qualificados e atendimento rápido.
-    </p>
-
-    <div class="hero-ctas">
-      <a class="btn" href="https://wa.me/5511952544885?text=Olá,+gostaria+de+um+orçamento" target="_blank">Solicitar orçamento</a>
-      <a class="btn alt" href="#servicos-tecnicos">Conhecer serviços</a>
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <img class="hero-img" src="assets/images/hero-eletrica.jpg" alt="Técnico em instalação elétrica Patronos Tech" loading="eager" width="410" height="200" decoding="async">
+    <h1 class="hero-title">Serviços técnicos profissionais em São Paulo</h1>
+    <div class="hero-sub">Elétrica, Ar-condicionado, CFTV, Telecomunicação e Manutenção Geral com padrão técnico e garantia.</div>
+    <div class="hero-cta">
+      <a class="btn" href="https://wa.me/5511952544885?text=Olá,+quero+um+orçamento+Patronos+Tech" target="_blank" rel="noopener" aria-label="Pedir orçamento no WhatsApp">Pedir orçamento no WhatsApp</a>
+      <a class="btn sec" href="#categorias" aria-label="Ver serviços">Ver serviços</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="servicos-tecnicos">
-  <h2>Serviços Técnicos</h2>
-  <p class="lead">
-    Soluções completas em serviços técnicos, do diagnóstico à execução, com qualidade e garantia.
-  </p>
+  <!-- CARROSSEL 1: CATEGORIAS -->
+  <section id="categorias" aria-label="Categorias de serviços">
+    <div class="carousel" id="carousel-categorias">
+      <div class="track">
+        <div class="card">
+          <img class="cat-img" src="assets/images/servico-eletrica.jpg" alt="Elétrica" loading="lazy">
+          <div class="card-title">Elétrica</div>
+          <div class="card-text">Instalações e manutenções elétricas seguras.</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Preciso+de+serviço+elétrico+Patronos+Tech" target="_blank" rel="noopener" aria-label="Orçamento elétrica">Pedir orçamento no WhatsApp</a>
+        </div>
+        <div class="card">
+          <img class="cat-img" src="assets/images/servico-ar.jpg" alt="Ar-condicionado" loading="lazy">
+          <div class="card-title">Ar-condicionado</div>
+          <div class="card-text">Instalação e manutenção de ar-condicionado split.</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Preciso+de+ar-condicionado+Patronos+Tech" target="_blank" rel="noopener" aria-label="Orçamento ar-condicionado">Pedir orçamento no WhatsApp</a>
+        </div>
+        <div class="card">
+          <img class="cat-img" src="assets/images/servico-cftv.jpg" alt="CFTV" loading="lazy">
+          <div class="card-title">CFTV</div>
+          <div class="card-text">Instalação de câmeras com acesso remoto.</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Preciso+de+serviço+CFTV+Patronos+Tech" target="_blank" rel="noopener" aria-label="Orçamento CFTV">Pedir orçamento no WhatsApp</a>
+        </div>
+        <div class="card">
+          <img class="cat-img" src="assets/images/servico-telecom.jpg" alt="Telecomunicação" loading="lazy">
+          <div class="card-title">Telecomunicação</div>
+          <div class="card-text">Estrutura de rede, internet e telefonia.</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Preciso+de+telecom+Patronos+Tech" target="_blank" rel="noopener" aria-label="Orçamento telecomunicações">Pedir orçamento no WhatsApp</a>
+        </div>
+        <div class="card">
+          <img class="cat-img" src="assets/images/servico-geral.jpeg" alt="Manutenção Geral" loading="lazy">
+          <div class="card-title">Manutenção Geral</div>
+          <div class="card-text">Pequenos reparos e manutenção predial.</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Preciso+de+manutenção+Patronos+Tech" target="_blank" rel="noopener" aria-label="Orçamento manutenção geral">Pedir orçamento no WhatsApp</a>
+        </div>
+      </div>
+      <div class="indicators" aria-label="Indicadores"></div>
+    </div>
+  </section>
 
-  <article class="card">
-    <h3>Instalações Técnicas</h3>
-    <p>
-      Instalações elétricas, telecom e CFTV executadas conforme normas técnicas e padrões de segurança.
-    </p>
-  </article>
+  <!-- CARROSSEL 2: SERVIÇOS EXECUTADOS -->
+  <section id="servicos" aria-label="Serviços executados">
+    <div class="carousel" id="carousel-servicos">
+      <div class="track">
+        <div class="card">
+          <img class="srv-img" src="assets/images/servico-eletrica.jpg" alt="Troca de quadro elétrico" loading="lazy">
+          <div class="card-title">Troca de quadro elétrico</div>
+          <div class="card-text">Padronização técnica, maior segurança e documentação atualizada.</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Quero+trocar+o+quadro+elétrico" target="_blank" rel="noopener" aria-label="Orçamento quadro elétrico">Pedir orçamento</a>
+        </div>
+        <div class="card">
+          <img class="srv-img" src="assets/images/servico-ar.jpg" alt="Instalação de ar-condicionado" loading="lazy">
+          <div class="card-title">Instalação de ar-condicionado</div>
+          <div class="card-text">Instalação split com garantia e total segurança elétrica.</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Quero+instalação+de+ar-condicionado" target="_blank" rel="noopener" aria-label="Orçamento ar-condicionado">Pedir orçamento</a>
+        </div>
+        <div class="card">
+          <img class="srv-img" src="assets/images/servico-cftv.jpg" alt="Instalação de câmeras" loading="lazy">
+          <div class="card-title">Instalação de câmeras</div>
+          <div class="card-text">CFTV completo, imagens seguras e configuração remota.</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Quero+instalação+de+câmeras" target="_blank" rel="noopener" aria-label="Orçamento câmeras">Pedir orçamento</a>
+        </div>
+        <div class="card">
+          <img class="srv-img" src="assets/images/servico-telecom.jpg" alt="Instalação de cabo de rede" loading="lazy">
+          <div class="card-title">Instalação de cabo de rede</div>
+          <div class="card-text">Cabeamento estruturado e ampliação de pontos de internet.</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Preciso+instalação+de+cabo+de+rede" target="_blank" rel="noopener" aria-label="Orçamento cabo de rede">Pedir orçamento</a>
+        </div>
+        <div class="card">
+          <img class="srv-img" src="assets/images/servico-agua.jpg" alt="Troca de torneiras" loading="lazy">
+          <div class="card-title">Troca de torneiras</div>
+          <div class="card-text">Substituição segura, sem vazamentos e acabamento profissional.</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Quero+trocar+a+torneira" target="_blank" rel="noopener" aria-label="Orçamento torneira">Pedir orçamento</a>
+        </div>
+      </div>
+      <div class="indicators" aria-label="Indicadores"></div>
+    </div>
+  </section>
 
-  <article class="card">
-    <h3>Manutenção Geral</h3>
-    <p>
-      Manutenção preventiva e corretiva para imóveis residenciais, comerciais e condomínios.
-    </p>
-  </article>
+  <!-- AUTORIDADE -->
+  <section class="autoridade" aria-label="Por que contratar a Patronos Tech?">
+    <h2>Por que contratar a Patronos Tech?</h2>
+    <ul>
+      <li>Técnicos qualificados</li>
+      <li>Atendimento rápido</li>
+      <li>Serviço com garantia</li>
+      <li>Padrão profissional</li>
+      <li>Experiência com residências, comércios e condomínios</li>
+    </ul>
+  </section>
 
-  <article class="card">
-    <h3>Marido de Aluguel</h3>
-    <p>
-      Pequenos reparos, ajustes e instalações com agilidade, organização e solução definitiva.
-    </p>
-  </article>
-</section>
-
-<section class="section">
-  <h2>Nossos Diferenciais</h2>
-  <p class="lead">
-    Profissionalismo, transparência e compromisso com a qualidade em cada serviço executado.
-  </p>
-
-  <ul>
-    <li>Técnicos qualificados e experientes</li>
-    <li>Atendimento rápido e organizado</li>
-    <li>Garantia técnica nos serviços</li>
-    <li>Planos para empresas e condomínios</li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Quem Somos</h2>
-  <p class="lead">
-    A Patronos Tech é especializada em serviços técnicos e manutenção, focada em segurança, eficiência e resultado.
-  </p>
-
-  <p>
-    Atuamos com uma rede de profissionais parceiros para entregar soluções completas, mantendo padrão de qualidade, transparência e confiança em cada atendimento.
-  </p>
-</section>
-
-<section class="section">
-  <h2>Contato Rápido</h2>
-  <p class="lead">
-    Informe o serviço desejado e fale direto conosco pelo WhatsApp.
-  </p>
-
-  <a class="btn" href="https://wa.me/5511952544885" target="_blank">
-    Falar no WhatsApp
-  </a>
-</section>
-
-<footer>
-  © 2025 Patronos Tech • Serviços Técnicos e Manutenção • WhatsApp (11) 95254-4885
-</footer>
-
+  <!-- CTA FINAL -->
+  <section class="cta-final" aria-label="Fale com um técnico">
+    <div class="cta-txt">Precisa resolver hoje? Fale direto com um técnico no WhatsApp.</div>
+    <a class="btn" href="https://wa.me/5511952544885?text=Preciso+resolver+hoje+Patronos+Tech" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp agora">Chamar no WhatsApp agora</a>
+  </section>
 </main>
+
+<!-- WhatsApp fixo no mobile -->
+<a class="whatsapp-float" href="https://wa.me/5511952544885?text=Olá,+quero+um+orçamento+Patronos+Tech" target="_blank" rel="noopener" aria-label="Falar no WhatsApp Patronos Tech" title="WhatsApp Patronos Tech">
+  <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#25d366"/><path d="M22.242 19.272c-.376-.187-2.225-1.099-2.57-1.226-.345-.128-.596-.187-.847.188-.252.375-.974 1.225-1.195 1.477-.221.251-.441.282-.817.094-.376-.188-1.588-.585-3.027-1.865-1.12-.997-1.877-2.23-2.097-2.606-.219-.376-.023-.579.165-.766.17-.169.376-.438.564-.657.189-.219.251-.376.377-.627.126-.25.063-.47-.032-.658-.094-.187-.847-2.049-1.161-2.808-.306-.765-.617-.661-.847-.674l-.724-.012c-.23-.012-.598.086-.913.42-.313.335-1.07 1.049-1.07 2.554 0 1.505 1.096 2.961 1.248 3.164.152.203 2.159 3.313 5.232 4.087.732.174 1.302.277 1.747.353.734.124 1.402.107 1.93.065.588-.048 2.225-.908 2.542-1.786.314-.876.314-1.626.221-1.787-.092-.16-.343-.252-.718-.44z" fill="#fff"/></svg>
+</a>
+
+<script>
+/*
+  Carrossel simples: automático e swipe mobile (função minimalista para mobile-first/sem plugins/peso extra)
+  - Cada carrossel deve ter .carousel id único e .track
+  - Aria & indicators acessíveis incluídos
+*/
+function initCarousel(carouselId, timeMs = 3200) {
+  const root = document.getElementById(carouselId);
+  if (!root) return;
+  const track = root.querySelector('.track');
+  const cards = Array.from(track.children);
+  const indicators = root.querySelector('.indicators');
+  let idx = 0, timer;
+  // render indicators
+  if(indicators) {
+    indicators.innerHTML='';
+    cards.forEach((_, i)=>{
+      const b=document.createElement('button');
+      b.addEventListener('click', ()=>go(i));
+      b.setAttribute('aria-label','Ver item '+(i+1));
+      b.className = i===0 ? 'active' : '';
+      indicators.appendChild(b);
+    });
+  }
+  function go(n) {
+    idx = n;
+    track.style.transform = `translateX(${-idx*cards[0].offsetWidth}px)`;
+    if(indicators)
+      indicators.querySelectorAll('button').forEach((b,i)=>b.className=i===idx?'active':'');
+  }
+  function next() { go((idx+1)%cards.length);}
+  // auto
+  function play(){ stop(); timer = setInterval(next,timeMs);}
+  function stop(){if(timer)clearInterval(timer);}
+  play();
+  // Touch/swipe
+  let sx=0,dx=0;
+  track.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;stop();});
+  track.addEventListener('touchmove',e=>{dx=e.touches[0].clientX;}, {passive:true});
+  track.addEventListener('touchend',()=>{
+    if(sx&&dx){
+      if(Math.abs(dx-sx)>24){
+        if(dx<sx) next();
+        else go((idx-1+cards.length)%cards.length);
+      }
+      sx=dx=0;play();
+    }
+  });
+  // Click/keyboard focus reativa auto
+  root.addEventListener('focusin',play);
+  root.addEventListener('mouseenter',stop); root.addEventListener('mouseleave',play);
+  // Responsivo
+  window.addEventListener('resize',()=>go(idx));
+  // Inicial
+  setTimeout(()=>go(0),88);
+}
+initCarousel('carousel-categorias',3200);
+initCarousel('carousel-servicos',3400);
+</script>
 
 </body>
 </html>
