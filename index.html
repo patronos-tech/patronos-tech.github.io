@@ -28,7 +28,7 @@
   header { padding:20px 0 14px; background:transparent; display:flex; justify-content:center;}
   .logo { font-size:1.25rem; font-weight:700; background:linear-gradient(90deg,#fff,var(--primary)); -webkit-background-clip:text; color:transparent;}
   
-  /* Hero */
+  /* Hero principal */
   .hero { margin-top:0; padding-top:18px; text-align:center;}
   .hero-img { width:100%; max-width:460px; min-width:180px; margin:0 auto 14px; border-radius:var(--radius); box-shadow:var(--shadow);}
   .hero-title { font-size:1.28rem; font-weight:800; margin:0 0 8px;}
@@ -36,7 +36,7 @@
   .hero-cta { display:flex; gap:10px; flex-direction:column; align-items:center; width:100%; margin:0 auto 0;}
   .hero-cta .btn { width:100%; max-width:340px;}
   
-  /* Button base */
+  /* Botões base */
   .btn {
     padding:13px 0;
     background:var(--primary);
@@ -55,7 +55,7 @@
   .btn.sec { background:transparent; color:var(--primary); border:2px solid var(--primary);}
   .btn:focus { outline:2px solid var(--primary);}
   
-  /* Carrossel base (shared for both) */
+  /* Carrossel base */
   .carousel {margin:0 auto 28px; position:relative; overflow:hidden; }
   .carousel .track {display:flex; gap:13px; transition:transform .48s cubic-bezier(.38,.78,.1,1); padding:2px 0;}
   .carousel .card {
@@ -69,7 +69,6 @@
   .carousel .card-title { font-size:1.08rem; font-weight:700; color:var(--primary); margin-bottom:4px;}
   .carousel .card-text { font-size:.987rem; color:var(--muted); margin-bottom:.9em; min-height:36px;}
   .carousel .btn {font-size:.97rem;padding:9px 0;}
-  /* Indicadores */
   .carousel .indicators {display:flex; gap:7px; justify-content:center; margin-top:10px;}
   .carousel .indicators button { width:12px; height:12px; border-radius:50%; border:0; background:rgba(255,255,255,0.14); padding:0; cursor:pointer; }
   .carousel .indicators .active {background:var(--primary);}
@@ -97,7 +96,7 @@
     .carousel .card {min-width:270px;max-width:310px;}
     .carousel .cat-img,.carousel .srv-img{width:92px;height:84px;}
     main {padding-bottom:70px;}
-    .whatsapp-float{display:none;} /* fixo só mobile */
+    .whatsapp-float{display:none;}
   }
   @media(max-width:520px) {
     .carousel .card {min-width:91vw;}
@@ -112,9 +111,12 @@
 </header>
 
 <main>
-  <!-- HERO -->
+  <!-- HERO PRIMEIRA DOBRA -->
   <section class="hero" aria-label="Hero">
-    <img class="hero-img" src="assets/images/hero-eletrica.jpg" alt="Técnico em instalação elétrica Patronos Tech" loading="eager" width="410" height="200" decoding="async">
+    <picture>
+      <source srcset="assets/images/hero-tecnico.png" media="(max-width:600px)">
+      <img class="hero-img" src="assets/images/hero-eletrica.png" alt="Técnico Patronos Tech realizando instalação elétrica padrão SP" loading="eager" width="410" height="200" decoding="async">
+    </picture>
     <h1 class="hero-title">Serviços técnicos profissionais em São Paulo</h1>
     <div class="hero-sub">Elétrica, Ar-condicionado, CFTV, Telecomunicação e Manutenção Geral com padrão técnico e garantia.</div>
     <div class="hero-cta">
@@ -123,36 +125,36 @@
     </div>
   </section>
 
-  <!-- CARROSSEL 1: CATEGORIAS -->
+  <!-- CARROSSEL 1: CATEGORIAS DE SERVIÇOS -->
   <section id="categorias" aria-label="Categorias de serviços">
     <div class="carousel" id="carousel-categorias">
       <div class="track">
         <div class="card">
-          <img class="cat-img" src="assets/images/servico-eletrica.jpg" alt="Elétrica" loading="lazy">
+          <img class="cat-img" src="assets/images/servico-eletrica.jpg" alt="Categoria Elétrica - instalações e manutenções elétricas seguras." loading="lazy">
           <div class="card-title">Elétrica</div>
           <div class="card-text">Instalações e manutenções elétricas seguras.</div>
           <a class="btn" href="https://wa.me/5511952544885?text=Preciso+de+serviço+elétrico+Patronos+Tech" target="_blank" rel="noopener" aria-label="Orçamento elétrica">Pedir orçamento no WhatsApp</a>
         </div>
         <div class="card">
-          <img class="cat-img" src="assets/images/servico-ar.jpg" alt="Ar-condicionado" loading="lazy">
+          <img class="cat-img" src="assets/images/servico-ar.jpg" alt="Categoria Ar-condicionado - instalação e manutenção split." loading="lazy">
           <div class="card-title">Ar-condicionado</div>
           <div class="card-text">Instalação e manutenção de ar-condicionado split.</div>
           <a class="btn" href="https://wa.me/5511952544885?text=Preciso+de+ar-condicionado+Patronos+Tech" target="_blank" rel="noopener" aria-label="Orçamento ar-condicionado">Pedir orçamento no WhatsApp</a>
         </div>
         <div class="card">
-          <img class="cat-img" src="assets/images/servico-cftv.jpg" alt="CFTV" loading="lazy">
+          <img class="cat-img" src="assets/images/servico-cftv.jpg" alt="Categoria CFTV - instalação de câmeras com acesso remoto." loading="lazy">
           <div class="card-title">CFTV</div>
           <div class="card-text">Instalação de câmeras com acesso remoto.</div>
           <a class="btn" href="https://wa.me/5511952544885?text=Preciso+de+serviço+CFTV+Patronos+Tech" target="_blank" rel="noopener" aria-label="Orçamento CFTV">Pedir orçamento no WhatsApp</a>
         </div>
         <div class="card">
-          <img class="cat-img" src="assets/images/servico-telecom.jpg" alt="Telecomunicação" loading="lazy">
+          <img class="cat-img" src="assets/images/servico-telecom.jpg" alt="Categoria Telecomunicação - estrutura de rede, internet e telefonia." loading="lazy">
           <div class="card-title">Telecomunicação</div>
           <div class="card-text">Estrutura de rede, internet e telefonia.</div>
           <a class="btn" href="https://wa.me/5511952544885?text=Preciso+de+telecom+Patronos+Tech" target="_blank" rel="noopener" aria-label="Orçamento telecomunicações">Pedir orçamento no WhatsApp</a>
         </div>
         <div class="card">
-          <img class="cat-img" src="assets/images/servico-geral.jpeg" alt="Manutenção Geral" loading="lazy">
+          <img class="cat-img" src="assets/images/servico-geral.jpeg" alt="Categoria Manutenção Geral - pequenos reparos e manutenção predial." loading="lazy">
           <div class="card-title">Manutenção Geral</div>
           <div class="card-text">Pequenos reparos e manutenção predial.</div>
           <a class="btn" href="https://wa.me/5511952544885?text=Preciso+de+manutenção+Patronos+Tech" target="_blank" rel="noopener" aria-label="Orçamento manutenção geral">Pedir orçamento no WhatsApp</a>
@@ -167,31 +169,31 @@
     <div class="carousel" id="carousel-servicos">
       <div class="track">
         <div class="card">
-          <img class="srv-img" src="assets/images/servico-eletrica.jpg" alt="Troca de quadro elétrico" loading="lazy">
+          <img class="srv-img" src="assets/images/servico-eletrica.jpg" alt="Troca de quadro elétrico - padrão técnico e segurança" loading="lazy">
           <div class="card-title">Troca de quadro elétrico</div>
           <div class="card-text">Padronização técnica, maior segurança e documentação atualizada.</div>
           <a class="btn" href="https://wa.me/5511952544885?text=Quero+trocar+o+quadro+elétrico" target="_blank" rel="noopener" aria-label="Orçamento quadro elétrico">Pedir orçamento</a>
         </div>
         <div class="card">
-          <img class="srv-img" src="assets/images/servico-ar.jpg" alt="Instalação de ar-condicionado" loading="lazy">
+          <img class="srv-img" src="assets/images/servico-ar.jpg" alt="Instalação de ar-condicionado split" loading="lazy">
           <div class="card-title">Instalação de ar-condicionado</div>
           <div class="card-text">Instalação split com garantia e total segurança elétrica.</div>
           <a class="btn" href="https://wa.me/5511952544885?text=Quero+instalação+de+ar-condicionado" target="_blank" rel="noopener" aria-label="Orçamento ar-condicionado">Pedir orçamento</a>
         </div>
         <div class="card">
-          <img class="srv-img" src="assets/images/servico-cftv.jpg" alt="Instalação de câmeras" loading="lazy">
+          <img class="srv-img" src="assets/images/servico-cftv.jpg" alt="Instalação de câmeras CFTV" loading="lazy">
           <div class="card-title">Instalação de câmeras</div>
           <div class="card-text">CFTV completo, imagens seguras e configuração remota.</div>
           <a class="btn" href="https://wa.me/5511952544885?text=Quero+instalação+de+câmeras" target="_blank" rel="noopener" aria-label="Orçamento câmeras">Pedir orçamento</a>
         </div>
         <div class="card">
-          <img class="srv-img" src="assets/images/servico-telecom.jpg" alt="Instalação de cabo de rede" loading="lazy">
+          <img class="srv-img" src="assets/images/servico-telecom.jpg" alt="Instalação de cabo de rede estruturado" loading="lazy">
           <div class="card-title">Instalação de cabo de rede</div>
           <div class="card-text">Cabeamento estruturado e ampliação de pontos de internet.</div>
           <a class="btn" href="https://wa.me/5511952544885?text=Preciso+instalação+de+cabo+de+rede" target="_blank" rel="noopener" aria-label="Orçamento cabo de rede">Pedir orçamento</a>
         </div>
         <div class="card">
-          <img class="srv-img" src="assets/images/servico-agua.jpg" alt="Troca de torneiras" loading="lazy">
+          <img class="srv-img" src="assets/images/servico-agua.jpg" alt="Troca de torneira com acabamento profissional" loading="lazy">
           <div class="card-title">Troca de torneiras</div>
           <div class="card-text">Substituição segura, sem vazamentos e acabamento profissional.</div>
           <a class="btn" href="https://wa.me/5511952544885?text=Quero+trocar+a+torneira" target="_blank" rel="noopener" aria-label="Orçamento torneira">Pedir orçamento</a>
@@ -201,7 +203,7 @@
     </div>
   </section>
 
-  <!-- AUTORIDADE -->
+  <!-- BLOCO DE AUTORIDADE -->
   <section class="autoridade" aria-label="Por que contratar a Patronos Tech?">
     <h2>Por que contratar a Patronos Tech?</h2>
     <ul>
@@ -226,11 +228,6 @@
 </a>
 
 <script>
-/*
-  Carrossel simples: automático e swipe mobile (função minimalista para mobile-first/sem plugins/peso extra)
-  - Cada carrossel deve ter .carousel id único e .track
-  - Aria & indicators acessíveis incluídos
-*/
 function initCarousel(carouselId, timeMs = 3200) {
   const root = document.getElementById(carouselId);
   if (!root) return;
@@ -238,7 +235,6 @@ function initCarousel(carouselId, timeMs = 3200) {
   const cards = Array.from(track.children);
   const indicators = root.querySelector('.indicators');
   let idx = 0, timer;
-  // render indicators
   if(indicators) {
     indicators.innerHTML='';
     cards.forEach((_, i)=>{
@@ -256,11 +252,9 @@ function initCarousel(carouselId, timeMs = 3200) {
       indicators.querySelectorAll('button').forEach((b,i)=>b.className=i===idx?'active':'');
   }
   function next() { go((idx+1)%cards.length);}
-  // auto
   function play(){ stop(); timer = setInterval(next,timeMs);}
   function stop(){if(timer)clearInterval(timer);}
   play();
-  // Touch/swipe
   let sx=0,dx=0;
   track.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;stop();});
   track.addEventListener('touchmove',e=>{dx=e.touches[0].clientX;}, {passive:true});
@@ -273,12 +267,9 @@ function initCarousel(carouselId, timeMs = 3200) {
       sx=dx=0;play();
     }
   });
-  // Click/keyboard focus reativa auto
   root.addEventListener('focusin',play);
   root.addEventListener('mouseenter',stop); root.addEventListener('mouseleave',play);
-  // Responsivo
   window.addEventListener('resize',()=>go(idx));
-  // Inicial
   setTimeout(()=>go(0),88);
 }
 initCarousel('carousel-categorias',3200);
@@ -286,4 +277,4 @@ initCarousel('carousel-servicos',3400);
 </script>
 
 </body>
-</html>
+                  </html>
