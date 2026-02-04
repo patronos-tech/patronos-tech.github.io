@@ -142,44 +142,10 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px}
       </div>
     </div>
   </section>
-  <section class="section" id="produtos" aria-label="Produtos">
-    <h2>Produtos</h2>
-    <p class="lead">Serviços executados e procedimentos — solicite orçamento detalhado para cada serviço.</p>
-    <div class="carousel" data-speed="52" aria-roledescription="carousel" aria-label="Serviços executados">
-      <div class="controls" aria-hidden="true">
-        <button class="ctrl prev" data-target="products" aria-label="Anterior (produtos)">‹</button>
-        <button class="ctrl next" data-target="products" aria-label="Próximo (produtos)">›</button>
-      </div>
-      <div class="track" data-track="products" role="list">
-        <article class="card prod-card" role="group" aria-label="Instalação de chuveiro">
-          <img src="assets/images/servico-manut.jpeg" alt="Instalação de chuveiro" loading="lazy" width="600" height="340">
-          <h3>Instalação de Chuveiro</h3>
-          <p>Substituição e instalação segura de chuveiros elétricos ou a gás, com verificação de disjuntores e aterramento.</p>
-          <div class="price" style="color:var(--muted);font-weight:600;margin-top:6px">Serviço sob medida</div>
-          <a class="btn" href="https://wa.me/5511952544885?text=Quero+orçar+Instalação+de+Chuveiro" aria-label="Pedir orçamento de Instalação de Chuveiro" target="_blank" rel="noopener">Pedir orçamento</a>
-        </article>
-        <article class="card prod-card" role="group" aria-label="Instalação de torneira">
-          <img src="assets/images/servico-agua.jpg" alt="Instalação de torneira" loading="lazy" width="600" height="340">
-          <h3>Instalação de Torneira</h3>
-          <p>Instalação e substituição com vedação profissional e testes de estanqueidade.</p>
-          <div class="price" style="color:var(--muted);font-weight:600;margin-top:6px">Serviço sob medida</div>
-          <a class="btn" href="https://wa.me/5511952544885?text=Quero+orçar+Instalação+de+Torneira" aria-label="Pedir orçamento de Instalação de Torneira" target="_blank" rel="noopener">Pedir orçamento</a>
-        </article>
-        <article class="card prod-card" role="group" aria-label="Instalação de câmeras">
-          <img src="assets/images/servico-cftv.jpg" alt="Instalação de câmeras" loading="lazy" width="600" height="340">
-          <h3>Instalação de Câmeras</h3>
-          <p>Projeto, posicionamento e instalação de câmeras com configuração de acesso remoto e testes finais.</p>
-          <div class="price" style="color:var(--muted);font-weight:600;margin-top:6px">Serviço sob medida</div>
-          <a class="btn" href="https://wa.me/5511952544885?text=Quero+orçar+Instalação+de+Câmeras" aria-label="Pedir orçamento de Instalação de Câmeras" target="_blank" rel="noopener">Pedir orçamento</a>
-        </article>
-      </div>
-      <div class="indicators" data-indicators="products" aria-hidden="false" role="tablist" aria-label="Indicadores de produtos"></div>
-    </div>
-  </section>
   <section class="section" id="servicos" aria-label="Serviços">
     <h2>Serviços</h2>
     <p class="lead">Encontre por categoria: manutenção predial, iluminação, pequenos reparos e muito mais.</p>
-    <div class="carousel" data-speed="28" aria-roledescription="carousel" aria-label="Serviços">
+    <div class="carousel" data-speed="36" aria-roledescription="carousel" aria-label="Serviços">
       <div class="controls" aria-hidden="true">
         <button class="ctrl prev" data-target="services" aria-label="Anterior (serviços)">‹</button>
         <button class="ctrl next" data-target="services" aria-label="Próximo (serviços)">›</button>
@@ -191,14 +157,73 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px}
           <p>Instalações e corretivos elétricos com padrões de segurança.</p>
           <a class="btn" href="products.html#eletrica" aria-label="Ver categoria elétrica">Ver categoria</a>
         </article>
+        <article class="card cat-card" role="group" aria-label="Ar condicionado">
+          <img src="assets/images/servico-geral.jpeg" alt="Ar condicionado" loading="lazy" width="600" height="340">
+          <h3>Ar condicionado</h3>
+          <p>Instalação, manutenção e limpeza de aparelhos de ar-condicionado split e janela.</p>
+          <a class="btn" href="https://wa.me/5511952544885?text=Quero+orçar+Ar+condicionado" aria-label="Pedir orçamento Ar condicionado" target="_blank" rel="noopener">Pedir orçamento</a>
+        </article>
         <article class="card cat-card" role="group" aria-label="CFTV">
           <img src="assets/images/servico-cftv.jpg" alt="CFTV" loading="lazy" width="600" height="340">
           <h3>CFTV</h3>
-          <p>Projetos, instalação e manutenção de sistemas de monitoramento.</p>
-          <a class="btn" href="products.html#cftv" aria-label="Ver categoria cftv">Ver categoria</a>
+          <p>Projeto, instalação e manutenção de sistemas de monitoramento.</p>
+          <a class="btn" href="products.html#cftv" aria-label="Ver categoria CFTV">Ver categoria</a>
+        </article>
+        <article class="card cat-card" role="group" aria-label="Telecomunicações">
+          <img src="assets/images/servico-eletrica.jpg" alt="Telecomunicações" loading="lazy" width="600" height="340">
+          <h3>Telecomunicações</h3>
+          <p>Rede cabeada, cabeamento estruturado e pontos de rede para internet e telefonia.</p>
+          <a class="btn" href="products.html#telecom" aria-label="Ver categoria Telecom">Ver categoria</a>
+        </article>
+        <article class="card cat-card" role="group" aria-label="Manutenção Geral">
+          <img src="assets/images/servico-manut.jpeg" alt="Manutenção Geral" loading="lazy" width="600" height="340">
+          <h3>Manutenção Geral</h3>
+          <p>Serviços preventivos e corretivos para manter a operação e conservação do imóvel.</p>
+          <a class="btn" href="https://wa.me/5511952544885?text=Quero+orçar+Manutenção+Geral" aria-label="Pedir orçamento Manutenção Geral" target="_blank" rel="noopener">Pedir orçamento</a>
         </article>
       </div>
       <div class="indicators" data-indicators="services" aria-hidden="false" role="tablist" aria-label="Indicadores de serviços"></div>
+    </div>
+  </section>
+  <section class="section" id="produtos" aria-label="Produtos">
+    <h2>Produtos</h2>
+    <p class="lead">Serviços executados e procedimentos — solicite orçamento detalhado para cada serviço.</p>
+    <div class="carousel" data-speed="52" aria-roledescription="carousel" aria-label="Produtos">
+      <div class="controls" aria-hidden="true">
+        <button class="ctrl prev" data-target="products" aria-label="Anterior (produtos)">‹</button>
+        <button class="ctrl next" data-target="products" aria-label="Próximo (produtos)">›</button>
+      </div>
+      <div class="track" data-track="products" role="list">
+        <article class="card prod-card" role="group" aria-label="Troca de quadro elétrico">
+          <img src="assets/images/servico-eletrica.jpg" alt="Troca de quadro elétrico" loading="lazy" width="600" height="340">
+          <h3>Troca de quadro elétrico</h3>
+          <p>Substituição de quadro de distribuição com modernização e organização de circuitos.</p>
+          <div class="price" style="color:var(--muted);font-weight:600;margin-top:6px">Serviço sob medida</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Quero+orçar+Troca+de+quadro+elétrico" aria-label="Pedir orçamento Troca de quadro" target="_blank" rel="noopener">Pedir orçamento</a>
+        </article>
+        <article class="card prod-card" role="group" aria-label="Instalação de Ar condicionado">
+          <img src="assets/images/servico-manut.jpeg" alt="Instalação de Ar condicionado" loading="lazy" width="600" height="340">
+          <h3>Instalação de Ar condicionado</h3>
+          <p>Instalação completa de splits e sistemas de ar, com verificação elétrica e vazamento.</p>
+          <div class="price" style="color:var(--muted);font-weight:600;margin-top:6px">Serviço sob medida</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Quero+orçar+Instalação+de+Ar+condicionado" aria-label="Pedir orçamento Instalação de Ar condicionado" target="_blank" rel="noopener">Pedir orçamento</a>
+        </article>
+        <article class="card prod-card" role="group" aria-label="Instalação de Câmeras">
+          <img src="assets/images/servico-cftv.jpg" alt="Instalação de Câmeras" loading="lazy" width="600" height="340">
+          <h3>Instalação de Câmeras</h3>
+          <p>Posicionamento, cabeamento e configuração de acesso remoto para câmeras de segurança.</p>
+          <div class="price" style="color:var(--muted);font-weight:600;margin-top:6px">Serviço sob medida</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Quero+orçar+Instalação+de+Câmeras" aria-label="Pedir orçamento Instalação de Câmeras" target="_blank" rel="noopener">Pedir orçamento</a>
+        </article>
+        <article class="card prod-card" role="group" aria-label="Troca de torneiras">
+          <img src="assets/images/servico-agua.jpg" alt="Troca de torneiras" loading="lazy" width="600" height="340">
+          <h3>Troca de torneiras</h3>
+          <p>Substituição com vedação profissional e testes de estanqueidade para evitar vazamentos.</p>
+          <div class="price" style="color:var(--muted);font-weight:600;margin-top:6px">Serviço sob medida</div>
+          <a class="btn" href="https://wa.me/5511952544885?text=Quero+orçar+Troca+de+torneiras" aria-label="Pedir orçamento Troca de torneiras" target="_blank" rel="noopener">Pedir orçamento</a>
+        </article>
+      </div>
+      <div class="indicators" data-indicators="products" aria-hidden="false" role="tablist" aria-label="Indicadores de produtos"></div>
     </div>
   </section>
   <section class="section" aria-label="Diferenciais">
